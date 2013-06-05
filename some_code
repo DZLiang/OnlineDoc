@@ -1,0 +1,15 @@
+#network,socket,tcp#
+$header file$:<sys/types.h>:
+       <socket.h>:
+       <arpa/inet.h>:
+       
+#pthread#
+$header file$:<pthread.h>
+func:pthread_create  pthread_mutex_init pthread_mutex_lock pthread_mutex_unlock pthread_mutex_destory
+type:pthread_t pthread_mutex_t
+$Deadlock$:two mutex should be lock in the same order
+
+#pthread,lock,mutex#
+$type$:
+
+##
