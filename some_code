@@ -17,4 +17,13 @@ $header file$:<signal.h>
 func:signal(parm_1,parm_2):parm_1:signal:param_2:the func when catch the signal
 attention:when use this func, the program will run the param_2 func instead of practicing the default behavior except the kill signal 
 
+#gdb,debug#
+$command$:trace next:n
+$call stack,bt,back trace$:bt 
+	  jump in the stack: up: jump to up level
+	  	   	  	  		 down: jump to down level
+$set start up arguments int gdb$:"set args XXX XXX XXX"
+				
+
+
 ##
