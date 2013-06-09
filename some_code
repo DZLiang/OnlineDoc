@@ -24,6 +24,24 @@ $call stack,bt,back trace$:bt
 	  	   	  	  		 down: jump to down level
 $set start up arguments int gdb$:"set args XXX XXX XXX"
 				
+#QT,control event, system desgin#
+QT bind the control event with the func connect(); func:
+;;;;
+#ifdef Q_QDOC
+    static QMetaObject::Connection connect(const QObject *sender, PointerToMemberFunction signal, const QObject *receiver, PointerToMemberFunction method, Qt::ConnectionType type);
+    static QMetaObject::Connection connect(const QObject *sender, PointerToMemberFunction signal, Functor functor);
+#else
+    //Connect a signal to a pointer to qobject member function
+    template <typename Func1, typename Func2>
+    static inline QMetaObject::Connection connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal,
+                                     const typename QtPrivate::FunctionPointer<Func2>::Object *receiver, Func2 slot,
+                                     Qt::ConnectionType type = Qt::AutoConnection)
+;;;;
+in qobjetct.h
 
+$SLOT SIGNAL$:I found that when i declare a "private slot" in the header file and not yet call connect func the connction system will promote that a warning 
+	  SLOT(somefunc()) SIGNAL(somesignal()) the target must has parentheses; is better to make  parameters the same(i don't concern too much the platform specify implement so ...)
+
+a nice design you can also use disconnect func to break the connect
 
 ##
