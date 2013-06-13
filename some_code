@@ -44,4 +44,8 @@ $SLOT SIGNAL$:I found that when i declare a "private slot" in the header file an
 
 a nice design you can also use disconnect func to break the connect
 
+#svn,cleanup,checkout update interrput,cleanup fail#
+find the particular .svn delete the lock log ,and the file in the dir prop-base but not the dir.
+but i don't know whether it will del the log or not.
+
 ##
