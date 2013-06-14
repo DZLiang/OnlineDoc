@@ -48,4 +48,21 @@ a nice design you can also use disconnect func to break the connect
 find the particular .svn delete the lock log ,and the file in the dir prop-base but not the dir.
 but i don't know whether it will del the log or not.
 
+#qmake#
+HEADERS - A list of all the header files for the application.
+SOURCES - A list of all the source files for the application.
+FORMS - A list of all the UI files (created using Qt Designer) for the application.
+LEXSOURCES - A list of all the lex source files for the application.
+YACCSOURCES - A list of all the yacc source files for the application.
+TARGET - Name of the executable for the application. This defaults to the name of the project file. (The extension, if any, is added automatically).
+DESTDIR - The directory in which the target executable is placed.
+DEFINES - A list of any additional pre-processor defines needed for the application.
+INCLUDEPATH - A list of any additional include paths needed for the application.
+DEPENDPATH - The dependency search path for the application.
+VPATH - The search path to find supplied files.
+DEF_FILE - Windows only: A .def file to be linked against for the application.
+RC_FILE - Windows only: A resource file for the application.
+RES_FILE - Windows only: A resource file to be linked against for the application.
+
+
 ##
