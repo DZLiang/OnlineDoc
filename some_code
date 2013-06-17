@@ -64,5 +64,25 @@ DEF_FILE - Windows only: A .def file to be linked against for the application.
 RC_FILE - Windows only: A resource file for the application.
 RES_FILE - Windows only: A resource file to be linked against for the application.
 
+#qmake, make, framework include, framework, link framework not found#
+framework is a BSD code library format, can be use in many compiler.
+include the header file like this
+;;;;
+//#include <XXXXX(framework's name)/XXXXX(framework's header file, generally it's name.h)
+#include <Foundation/Foundation.h>
+;;;;
+specify the library search path 
 
+#c++, inherition inherit derivation derive, virtual#
+$virtual derivation$
+
+case 1:  E         E    case 2:       E 
+     	 \        /                  / \
+          B      C                  B   C
+           \    /                   \  /
+	      A                       A
+
+case 2 is virtual derivation
+your can call the E's func in A 
+in case 1 your should call E's func by : a.B::efunc();
 ##
