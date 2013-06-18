@@ -85,4 +85,15 @@ case 1:  E         E    case 2:       E
 case 2 is virtual derivation
 your can call the E's func in A 
 in case 1 your should call E's func by : a.B::efunc();
+
+#emacs key,command#
+C-h w:find the binding key by command
+C-h k:find the command by key
+in dired mode you can use o to open the file in other frame
+auto complete: M-/
+$todo$: what is tag how wo use tag
+
+#svn command line#
+$svn status -u$: can list the file the has a new version in server
+
 ##
