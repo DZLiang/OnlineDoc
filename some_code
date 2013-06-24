@@ -80,7 +80,7 @@ case 1:  E         E    case 2:       E
      	 \        /                  / \
           B      C                  B   C
            \    /                   \  /
-	      A                       A
+    	      A                       A
 
 case 2 is virtual derivation
 your can call the E's func in A 
@@ -96,4 +96,29 @@ $todo$: what is tag how wo use tag
 #svn command line#
 $svn status -u$: can list the file the has a new version in server
 
+#code system, utf8, gbk, gb18030, gb2312#
+sometimes you can read a gbXXX file in utf8, but the Chinese will be garbled
+gbXXXX use two byte to code a Chinese character and use one to English character or some characters so it lead the situation above
+use locale command you can figure out the current system locale info 
+can set LANG=XXXX in profile or on i18n file to change the language coding 
+now my mac use utf8 code and usually linux use utf8 windows use GBK or GB18030
+I can not find the i18n file in mac
+and linux 's i18n file is locate in /etc/sysconfig/i18n
+i18n is the abberivation of internationalization 
+
+#emacs configuration, tab indent#
+in emacs when you press <tab> it will not insert a tab to the buffer, it will call a list func: "TAB runs the command indent-for-tab-command, which is an interactive
+compiled Lisp function in `indent.el'.TAB runs the command indent-for-tab-command, which is an interactive
+compiled Lisp function in `indent.el'."
+
+SO: when set the indent of text mode to 4 spaces 
+The key point is to tell emacs to insert whatever you want when indenting, this is done by changing the indent-line-function. It is easier to change it to insert a tab and then change tabs into 4 spaces than change it to insert 4 spaces. The following configuration will solve your problem:
+
+#linux file organization#
+/usr/ software or something when system is install
+/opt/ software or something when install after the system is stand
+/opt/local/share data or something for share 
+
+/bin/ binary file - executable for example shell pwd or something/utility use often
+/sbin/ super user 's /bin/
 ##
