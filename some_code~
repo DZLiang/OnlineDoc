@@ -122,7 +122,3 @@ The key point is to tell emacs to insert whatever you want when indenting, this 
 /bin/ binary file - executable for example shell pwd or something/utility use often
 /sbin/ super user 's /bin/
 ##
-
-#ndk-build gcc warining error
-in ndk r9 format warning is default treat as error add this  APP_CFLAGS += -Wno-error=format-security in the application.mk file can prevent that
-##
